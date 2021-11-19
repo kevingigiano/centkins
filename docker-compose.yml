@@ -1,0 +1,31 @@
+version: "3.7"
+
+services:
+
+  ########################################################################
+  # Jenkins
+  ########################################################################
+
+  jenkins:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: centkins
+    hostname: centkins
+    restart: always
+    user: root
+    environment:
+      - TZ=America/Denver
+        #- JAVA_OPTS="-Dhudson.model.DownloadService.noSignatureCheck=true"
+      - JENKINS_OPTS="--handlerCountStartup=100"
+      - JENKINS_OPTS="--handlerCountMax=300"
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - ./jenkins_data:/var/jenkins_home
+      - ./home:/home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  jenkins_home:
