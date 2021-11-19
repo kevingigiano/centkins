@@ -7,3 +7,6 @@ CentOS7 based Jenkins container
   * Most of this code came from the official Jenkins Docker file with "hacks" put in for my own needs.
 * The Jenkins pipeline job uses OSpackage to create the RPM.
 
+To run this you need Docker and docker-compose installed
+* docker-compose up --build
+
