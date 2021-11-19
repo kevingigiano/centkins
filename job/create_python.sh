@@ -1,4 +1,5 @@
 #!/bin/bash
+# This is just an test script that I used for figuring out how to build python from source
 
 WORKDIR=$(pwd)
 cd /tmp/
