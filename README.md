@@ -13,5 +13,5 @@ To run this you need Docker and docker-compose installed
 
 Once Jenkins is up and running, create a new pipeline job and use the following code for the pipeline:
 * https://github.com/kevingigiano/centkins/blob/master/job/jenkins_pipline
-* The should be changed to checkout the build.gradle file
+* The pipeline should be changed to checkout the build.gradle file from whatever repository you are using.
 
